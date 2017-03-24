@@ -1,0 +1,11 @@
+/* my scss file */
+.testing {
+  display: flex;
+  width: 71.42857%;
+  background-color: blue; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #bdbdbd; }

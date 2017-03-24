@@ -1,0 +1,23 @@
+/* my scss file */
+@charset "UTF-8";
+
+$font-stack: 'Droid Sans', Helvetica, sans-serif;
+$primary-color: #1de9b6;
+$very-dark-grey: #37474f;
+$dark-grey: #607d8b;
+$medium-grey: #bdbdbd;
+$light-grey: #f5f5f5;
+$card-white: #fff;
+
+.testing {
+	display: flex;
+  width: percentage(5/7);
+  background-color: blue;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $medium-grey;
+}
