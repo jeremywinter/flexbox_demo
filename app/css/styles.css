@@ -1,8 +1,7 @@
-/* my scss file */
 .testing {
   display: flex;
   width: 71.42857%;
-  background-color: blue; }
+  background-color: red; }
 
 html,
 body {
