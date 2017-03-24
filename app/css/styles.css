@@ -8,3 +8,16 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff; }
+
+body {
+  font-family: "Droid Sans", Helvetica, sans-serif;
+  padding-bottom: 40px; }
+
+h1,
+h2,
+h3,
+h4 {
+  color: #1de9b6; }
+
+p {
+  color: #607d8b; }

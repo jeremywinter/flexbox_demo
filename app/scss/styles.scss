@@ -21,3 +21,19 @@ body {
   padding: 0;
   background-color: $card-white;
 }
+
+body {
+  font-family: $font-stack;
+  padding-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $primary-color;
+}
+
+p {
+  color: $dark-grey;
+}
