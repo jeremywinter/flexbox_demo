@@ -5,7 +5,7 @@
 
 var gulp 	= require('gulp');
 var sass 	= require('gulp-sass');
-//var uglify 	= require('gulp-uglify'); // js minify
+var uglify 	= require('gulp-uglify'); // js minify
 var prefix 	= require('gulp-autoprefixer');
 
 
@@ -25,25 +25,25 @@ gulp.task ('sass', function() {
 });
 
 
-// gulp minify js
-// gulp.task ('uglify', function() {
-// 	return gulp.scr('app/js/*.js')
-// 		.pipe.(uglify())
-// 		//on('error', errorLog)
-// 		.pipe.(gulp.dest('app/minjs'));
-// });
+ //gulp minify js
+gulp.task ('uglify', function() {
+ 	return gulp.src('app/js/**/*.js')
+ 		.pipe(uglify())
+ 		//on('error', errorLog)
+		.pipe(gulp.dest('app/minjs'));
+ });
 
 
 // watch task 
 // rebuilds everytime a change is made
-gulp.task('watch', function(){
+gulp.task('watch', function() {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
-  	//gulp.watch('app/js/**/*/js', ['uglify']);
+  	gulp.watch('app/js/**/*.js', ['uglify']);
 });
 	
 
 // default build task
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'uglify', 'watch']);
 
 
 
