@@ -17,7 +17,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: $light-grey;
+  background-color: $very-dark-grey;
+}
 
 body {
   font-family: $font-stack;
@@ -31,6 +32,4 @@ h4 {
   color: $primary-color;
 }
 
-p {
-  color: $dark-grey;
-}
+p { color: $dark-grey }

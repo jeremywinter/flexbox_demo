@@ -1,2 +1,5 @@
 // main js file
-console.log('hello world - mainjs')
+var mayVar = "mayVar";
+
+console.log('hello world - mainjs');
+console.log('mayVar');
