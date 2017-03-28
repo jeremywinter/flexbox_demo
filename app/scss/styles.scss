@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 
 $font-stack: 'Droid Sans', Helvetica, sans-serif;
@@ -12,15 +11,13 @@ $card-white: #fff;
 .testing {
 	display: flex;
 	width: percentage(5/7);
-
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: $card-white;
-}
+  background-color: $light-grey;
 
 body {
   font-family: $font-stack;
