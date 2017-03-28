@@ -1,1 +1,1 @@
-var mayVar="mayVar";console.log("hello world!!!"),console.log("mayVar");
+var myVar="myVar";console.log("hello world!!!"),console.log("myVar");
