@@ -11,11 +11,12 @@ $card-white: #fff;
 .testing {
 	display: flex;
 	width: percentage(5/7);
+	color: $card-white;
 }
 
 html,
 body {
-  margin: 0;
+  margin: 10px;
   padding: 0;
   background-color: $very-dark-grey;
 }

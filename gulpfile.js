@@ -8,11 +8,11 @@ var sass 	= require('gulp-sass');
 var scripts = require('gulp-uglify'); // js minify
 var prefix 	= require('gulp-autoprefixer');
 
-
-// function errorLog(error) {
-// 	console.error.bind(error);
-// 	this.emit('end');
-// }
+/*
+function errorLog(error) {
+	console.error.bind(error);
+ 	this.emit('end');
+}*/
 
 
 // compile SASS into CSS task
@@ -38,7 +38,7 @@ gulp.task ('scripts', function() {
 // rebuilds everytime a change is made
 gulp.task('watch', function() {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
-  	gulp.watch('app/js/**/*.js', ['scripts']);
+	gulp.watch('app/js/**/*.js', ['scripts']);
 });
 	
 
