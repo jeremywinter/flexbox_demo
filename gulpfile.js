@@ -45,34 +45,3 @@ gulp.task('watch', function() {
 // default build task
 gulp.task('default', ['sass', 'scripts', 'watch']);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
