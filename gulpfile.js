@@ -21,7 +21,6 @@ gulp.task ('sass', function() {
 // rebuilds everytime a change is made
 gulp.task('watch', function(){
 	gulp.watch('app/scss/**/*.scss', ['sass']);
-  	//gulp.watch('app/js/**/*/js', ['uglify']);
 });
 	
 
