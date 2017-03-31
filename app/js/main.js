@@ -1,5 +1,6 @@
 // main js file
 var myVar = "Hello myVar!";
+var myNewVar = 5;
 
 console.log('hello world!!!');
-console.log(myVar);
+console.log(myNewVar);
