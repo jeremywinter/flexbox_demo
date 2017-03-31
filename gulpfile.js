@@ -23,7 +23,7 @@ gulp.task ('sass', function() {
 gulp.task ('scripts', function() {
  	return gulp.src('app/js/**/*.js')
  		.pipe(scripts())
- 		//on('error', errorLog)
+		.on('error', console.error.bind(console)) //error handling
 		.pipe(gulp.dest('app/minjs'));
  });
 
