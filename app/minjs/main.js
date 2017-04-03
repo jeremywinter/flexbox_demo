@@ -1,1 +1,1 @@
-var myVar="Hello myVar!";console.log("hello world!!!"),console.log(myVar);
+var myVar="myVar!";console.log("hello world!!!"),console.log(myVar);

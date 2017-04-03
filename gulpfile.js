@@ -1,12 +1,14 @@
 /*
   gulpfile.js
+
+  Contains: Autoprefixer, js_minify, and error_handling 
   ===========
 */
 
-var gulp 		= require('gulp');
-var sass 		= require('gulp-sass');
-var scripts = require('gulp-uglify'); // js minify
-var prefix 	= require('gulp-autoprefixer');
+var gulp 			= require('gulp');
+var sass 			= require('gulp-sass');
+var scripts 	= require('gulp-uglify'); // js minify
+var prefix 		= require('gulp-autoprefixer');
 
 
 // compile SASS into CSS task
@@ -19,7 +21,7 @@ gulp.task ('sass', function() {
 });
 
 
- //gulp minify js
+//gulp minify js
 gulp.task ('scripts', function() {
  	return gulp.src('app/js/**/*.js')
  		.pipe(scripts())
