@@ -5,10 +5,10 @@
   ===========
 */
 
-var gulp      = require('gulp');
-var sass 			= require('gulp-sass');
-var scripts		= require('gulp-uglify'); // js minify
-var prefix 		= require('gulp-autoprefixer');
+var gulp				= require('gulp');
+var sass				= require('gulp-sass');
+var scripts			= require('gulp-uglify'); // js minify
+var prefix			= require('gulp-autoprefixer');
 
 
 // compile SASS into CSS task
