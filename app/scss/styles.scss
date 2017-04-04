@@ -1,12 +1,7 @@
 @charset "UTF-8";
+@import 'colors';
 
 $font-stack: 'Droid Sans', Helvetica, sans-serif;
-$primary-color: #1de9b6;
-$very-dark-grey: #37474f;
-$dark-grey: #607d8b;
-$medium-grey: #bdbdbd;
-$light-grey: #f5f5f5;
-$card-white: #fff;
 
 /* Mixins
 ---------------------------*/
@@ -39,7 +34,7 @@ $card-white: #fff;
 .testing {
 	display: flex;
 	width: percentage(5/7);
-	color: $card-white;
+	color: $light-grey;
 }
 
 html,
