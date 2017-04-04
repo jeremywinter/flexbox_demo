@@ -23,7 +23,7 @@ $card-white: #fff;
   color: $card-white;
   background-color: $primary-color;
   border-color: $primary-color;
-  text-decortation: none;
+  text-decoration: none;
 }
 
 .bg_animation {
@@ -104,15 +104,17 @@ section 1 -  login with Nesting and Mixins
   @include border_radius (50px);
 }
 
-// @extend
+/* @extend */
 .btn:hover {
   @extend .hover_properties;
   @extend .bg_animation;
 }
+
 .btn:focus{
   border-color: $card-white;
   outline: 0;
 }
+
 .btn:focus,
 .btn:active:focus,
 .btn.active:focus,
@@ -122,19 +124,18 @@ section 1 -  login with Nesting and Mixins
   outline: 0px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
+
 input {
   padding: 8px;
   border: none;
   border-bottom: 2px solid $primary-color;
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+ 	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
  input:focus, .btn:focus {
    border-color: $primary-color;
    outline: 0;
-    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.0), 0 0 0px rgba(29,233,182, .0);
-           box-shadow: inset 0 0px 0px rgba(0,0,0,.0), 0 0 0px rgba(29,233,182, .0);
+	 box-shadow: inset 0 0px 0px rgba(0,0,0,.0), 0 0 0px rgba(29,233,182, .0);
 }
 
 /*-----------------------------------
@@ -152,7 +153,7 @@ section 2 -  columns
 
 .main-column {
   flex: 3;
-  // 3x wider than the other child elements
+  /* 3x wider than the other child elements */
   order: 2;
   flex-basis: 60%;
 }
@@ -170,14 +171,14 @@ section 2 -  columns
   flex-basis: 20%;
 }
 
-// target the parent element to add flexbox for screens < 900px
+/* target the parent element to add flexbox for screens < 900px */
 @media screen and (min-width:900px) {
   .column-layout {
     display: flex;
     align-items: stretch;
-    // flex-start, flex-end, center
+    /* flex-start, flex-end, center */
     justify-content: space-between;
-    // flex-start, flex-end, center
+    /* flex-start, flex-end, center */
   }
   .main-column {
     margin: 0 20px;
@@ -195,16 +196,16 @@ section 3 - features with lighten, tint & Nesting
 }
 
 .call-out {
-  // child element
+  /* child element */
   padding: 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   flex-basis: 32%;
-  // width
-  p,
-  h4 {
-    color: $card-white;
-  }
+  /* width */
+	  p,
+	  h4 {
+	    color: $card-white;
+	  }
 }
 
 .call-out:nth-child(1) {
@@ -227,14 +228,14 @@ section 3 - features with lighten, tint & Nesting
   }
 }
 
-// more color samples using mixins & Nesting
+/* more color samples using mixins & Nesting */
 .call-out2 {
-  // child element
+  /* child element */
   padding: 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
   flex-basis: 32%;
-  // width
+  /* width */
   h4,
   p {
     color: $card-white;
@@ -253,14 +254,14 @@ section 3 - features with lighten, tint & Nesting
   background-color: tint($primary-color, 60%);
 }
 
-// target the parent element to add flexbox for screens < 900px
+/* target the parent element to add flexbox for screens < 900px */
 @media screen and (min-width: 900px) {
   .call-outs-container {
     display: flex;
     align-items: stretch;
-    // flex-start, flex-end, center
+    /* flex-start, flex-end, center */
     justify-content: space-between;
-    // flex-start, flex-end, center
+    /* flex-start, flex-end, center */
   }
 }
 
@@ -327,15 +328,15 @@ section 5 - Center Me with Nesting
   margin: 40px auto 40px auto;
   background-color: $card-white;
   display: flex;
-  /*parent div*/
+  /* parent div */
   .center {
     height: 100px;
     width: 240px;
     background-color: $medium-grey;
     margin: auto;
-    // auto margin to child div
+    /* auto margin to child div */
     display: flex;
-    // parent div
+    /* parent div */
     p {
       color: $card-white;
       font-size: 28px;
@@ -345,7 +346,7 @@ section 5 - Center Me with Nesting
 
 .center-text {
   margin: auto;
-  // auto margin to child p
+  /* auto margin to child p */
 }
 
 
@@ -356,7 +357,7 @@ section 6 - Columns + Row
 .equal-height-container {
   max-width: 900px;
   margin: 0 auto;
-  // display: flex;
+  /* display: flex; */
 }
 
 .first {
@@ -366,7 +367,7 @@ section 6 - Columns + Row
 }
 
 .second {
-  // parent of a + b
+  /* parent of a + b */
   background-color: $very-dark-grey;
   flex: 1;
   display: flex;
@@ -386,9 +387,9 @@ section 6 - Columns + Row
 }
 
 .center-text-again {
-  /*example only*/
+  /* example only */
   margin: auto;
-  /*auto margin to child*/
+  /* auto margin to child */
   padding: 40px 0;
 }
 
@@ -397,6 +398,16 @@ section 6 - Columns + Row
     display: flex;
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
