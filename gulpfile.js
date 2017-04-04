@@ -18,7 +18,7 @@ gulp.task ('sass', function() {
 	return gulp.src('app/scss/**/*.scss') // glob gets any file with .scss
 		.pipe(sass()) // Converts Sass to CSS with gulp-sass
 		.on('error', console.error.bind(console)) //error handling
-		.pipe(prefix('last 2 versions'))
+		.pipe(prefix('last 4 versions'))
 		.pipe(gulp.dest('app/css'));
 });
 
@@ -55,12 +55,3 @@ gulp.task('watch', function() {
 
 // default build task
 gulp.task('default', ['sass', 'scripts', 'watch']);
-
-
-
-
-
-
-
-
-
