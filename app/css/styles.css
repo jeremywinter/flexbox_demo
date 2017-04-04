@@ -1,3 +1,19 @@
+/* Mixins
+---------------------------*/
+/* Extend/Inheritance 
+---------------------------*/
+.hover_properties, .btn:hover {
+  color: #fff;
+  background-color: #1de9b6;
+  border-color: #1de9b6;
+  text-decortation: none; }
+
+.bg_animation, .btn:hover {
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+  transition-property: color, border-color, background-color; }
+
+/* testing only*/
 .testing {
   display: -ms-flexbox;
   display: flex;
@@ -6,7 +22,7 @@
 
 html,
 body {
-  margin: 10px;
+  margin: 0;
   padding: 0;
   background-color: #f5f5f5; }
 
@@ -22,3 +38,285 @@ h4 {
 
 p {
   color: #607d8b; }
+
+/*-----------------------------------
+section 1 -  login with Nesting and Mixins
+-----------------------------------*/
+.container {
+  max-width: 340px;
+  margin: 20px auto;
+  padding: 0 30px 30px 30px;
+  background-color: #fff;
+  text-align: center; }
+  .container h2 {
+    padding-top: 20px;
+    margin-bottom: 14px;
+    font-size: 20px; }
+
+.form-row {
+  padding: 10px 0;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex; }
+  .form-row label {
+    padding-right: 10px; }
+  .form-row input {
+    -ms-flex: 1;
+        flex: 1; }
+
+.btn {
+  color: #607d8b;
+  background-color: #fff;
+  border: 2px solid #1de9b6;
+  margin: 20px 4px 0;
+  padding: 8px 16px;
+  line-height: normal;
+  border-radius: 50px; }
+
+.btn:focus {
+  border-color: #fff;
+  outline: 0; }
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+input {
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #1de9b6;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
+
+input:focus, .btn:focus {
+  border-color: #1de9b6;
+  outline: 0;
+  box-shadow: inset 0 0px 0px transparent, 0 0 0px rgba(29, 233, 182, 0); }
+
+/*-----------------------------------
+section 2 -  columns
+-----------------------------------*/
+.column-layout {
+  /*parent element*/
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 20px 50px;
+  background-color: #fff;
+  line-height: 1.65; }
+
+.main-column {
+  -ms-flex: 3;
+      flex: 3;
+  -ms-flex-order: 2;
+      order: 2;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%; }
+
+.sidebar-one {
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-order: 1;
+      order: 1;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%; }
+
+.sidebar-two {
+  -ms-flex: 1;
+      flex: 1;
+  -ms-flex-order: 3;
+      order: 3;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%; }
+
+@media screen and (min-width: 900px) {
+  .column-layout {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .main-column {
+    margin: 0 20px; } }
+
+/*-----------------------------------
+section 3 - features with lighten, tint & Nesting
+-----------------------------------*/
+.call-outs-container {
+  max-width: 1200px;
+  margin: 40px auto 0 auto; }
+
+.call-out {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%; }
+  .call-out p,
+  .call-out h4 {
+    color: #fff; }
+
+.call-out:nth-child(1) {
+  background-color: #7af2d4; }
+
+.call-out:nth-child(2) {
+  background-color: #d7fbf2; }
+
+.call-out:nth-child(3) {
+  background-color: white; }
+
+.call-out:nth-child(2) h4,
+.call-out:nth-child(2) p,
+.call-out:nth-child(3) h4,
+.call-out:nth-child(3) p {
+  color: #1de9b6; }
+
+.call-out2 {
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%; }
+  .call-out2 h4,
+  .call-out2 p {
+    color: #fff; }
+
+.call-out2:nth-child(1) {
+  background-color: tint(#1de9b6, 20%); }
+
+.call-out2:nth-child(2) {
+  background-color: tint(#1de9b6, 40%); }
+
+.call-out2:nth-child(3) {
+  background-color: tint(#1de9b6, 60%); }
+
+@media screen and (min-width: 900px) {
+  .call-outs-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
+
+/*-----------------------------------
+section 4 - Row of Items with @mixin
+-----------------------------------*/
+.fixed-size-container {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  background-color: #fff;
+  padding: 30px 10px 20px 10px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.fixed-size {
+  width: 100px;
+  height: 100px;
+  background-color: #bdbdbd;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 10px 10px; }
+
+.fixed-size:nth-child(2) {
+  border-radius: 5px; }
+
+.fixed-size:nth-child(3) {
+  border-radius: 10px; }
+
+.fixed-size:nth-child(4) {
+  border-radius: 20px; }
+
+.fixed-size:nth-child(5) {
+  border-radius: 30px; }
+
+.fixed-size:nth-child(6) {
+  border-radius: 40px; }
+
+.fixed-size:nth-child(7) {
+  border-radius: 50px; }
+
+/*-----------------------------------
+section 5 - Center Me with Nesting
+-----------------------------------*/
+.banner {
+  height: 200px;
+  max-width: 400px;
+  margin: 40px auto 40px auto;
+  background-color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  /*parent div*/ }
+  .banner .center {
+    height: 100px;
+    width: 240px;
+    background-color: #bdbdbd;
+    margin: auto;
+    display: -ms-flexbox;
+    display: flex; }
+    .banner .center p {
+      color: #fff;
+      font-size: 28px; }
+
+.center-text {
+  margin: auto; }
+
+/*-----------------------------------
+section 6 - Columns + Row
+-----------------------------------*/
+.equal-height-container {
+  max-width: 900px;
+  margin: 0 auto; }
+
+.first {
+  background-color: #fff;
+  padding: 20px;
+  -ms-flex: 1;
+      flex: 1; }
+
+.second {
+  background-color: #37474f;
+  -ms-flex: 1;
+      flex: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+
+.second-a {
+  background-color: tint(#1de9b6, 40%);
+  -ms-flex: 1;
+      flex: 1;
+  display: -ms-flexbox;
+  display: flex; }
+
+.second-b {
+  background-color: tint(#1de9b6, 60%);
+  -ms-flex: 1;
+      flex: 1;
+  display: -ms-flexbox;
+  display: flex; }
+
+.center-text-again {
+  /*example only*/
+  margin: auto;
+  /*auto margin to child*/
+  padding: 40px 0; }
+
+@media screen and (min-width: 900px) {
+  .equal-height-container {
+    display: -ms-flexbox;
+    display: flex; } }

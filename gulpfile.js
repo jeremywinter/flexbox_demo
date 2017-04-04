@@ -1,7 +1,8 @@
 /*
   gulpfile.js
 
-  Contains: Autoprefixer, js_minify, error_handling and browserSync 
+  Contains: 
+  Autoprefixer, js_minify, error_handling and browserSync 
   ===========
 */
 
